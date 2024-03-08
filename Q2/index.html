@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">x
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Document</title>
+    <style>
+        #navbar_links .nav-link:hover {
+            color: orange
+        }
+
+        #navbar_links .nav-link {
+            font-weight: 500;
+            font-size: 0.87rem;
+        }
+
+        #navbar_links #search-bar {
+            border: 1px solid rgb(69, 69, 150);
+            border-radius: 3px;
+            color: rgb(69, 69, 150);
+        }
+
+        .logo-image {
+            /* object-fit: cover; */
+            width: 230px;
+            height: 37px
+        }
+
+        #slider {
+            position: relative;
+            width: 300px;
+            margin: 50px;
+        }
+
+        .slide {
+            flex: 1 0 33.33%;
+            /* Set flex-grow, flex-shrink, and flex-basis */
+            /* height: 100px; */
+            /* Adjust the height as needed */
+            /* background-color: #ccc; */
+            margin: 0px 10px;
+            width: 33vw;
+            color: gray;
+            /* Add margin between slides */
+            text-align: center
+        }
+
+        .slide:hover {
+            border-bottom: 3px solid rgb(13, 13, 59);
+        }
+
+        /* @keyframes fading {
+            0% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        } */
+        #navbar-bottom,
+        #navbar-bottom-2 {
+            border-top: 1px solid grey
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#"><img src="logoo.png" class="logo-image" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="d-flex w-100 justify-content-end align-items-end">
+                    <ul class="navbar-nav d-flex justify-content-end align-items-end" id="navbar_links">
+                        <li class="nav-item mr-2" id="search-bar">
+                            <div class="search_items d-flex justify-content-center m-1" style="width:130px">
+                                <i class="fa fa-search" style="padding-top: 10px;"></i>
+                                <a class="nav-link" href="#">SEARCH<span class="sr-only">(current)</span></a>
+                            </div>
+                        </li>
+                        <li class="nav-item mr-2">
+                            <a class="nav-link" href="#">HOW IT WORKS <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item mr-2">
+                            <a class="nav-link" href="#">LOGIN</a>
+                        </li>
+                        <li class="nav-item mr-2">
+                            <a class="nav-link" href="#">SIGN UP</a>
+                        </li>
+                        <li class="nav-item mr-2">
+                            <a class="nav-link" href="#">FREELANCER?</a>
+                        </li>
+                    </ul>
+                    <!-- <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form> -->
+                </div>
+            </div>
+        </nav>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar-bottom"
+            style="height:70px;background-color: white;">
+            <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarSlider" style="width:94vw">
+                <button class="prev" style="width:2vw;">&lt;</button>
+                <div id="slider" class="d-flex justify-content-center" style="width:60vw">
+                    <div class="slide slide1" onmouseover="showDropdown(this)" onmouseout="hideDropdown(this)">
+                        <h5 style="font-size: 12px;">Technology and Programming</h5>
+                        <!-- <div class="dropdown-menu" style="display: none;">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a> -->
+                    </div>
+                    <div class="slide slide2" onmouseover="showDropdown(this)" onmouseout="hideDropdown(this)">
+                        <h5 style="font-size: 12px;">Writing and Translation</h5>
+                    </div>
+                    <div class="slide slide3" onmouseover="showDropdown(this)" onmouseout="hideDropdown(this)">
+                        <h5 style="font-size: 12px;">Design</h5>
+                    </div>
+                    <div class="slide slide4" onmouseover="showDropdown(this)" onmouseout="hideDropdown(this)">
+                        <h5 style="font-size: 12px;">Digital Marketing</h5>
+                    </div>
+                    <div class="slide slide5" onmouseover="showDropdown(this)" onmouseout="hideDropdown(this)">
+                        <h5 style="font-size: 12px;">Social Media</h5>
+                    </div>
+                    <div class="slide slide6" onmouseover="showDropdown(this)" onmouseout="hideDropdown(this)">
+                        <h5 style="font-size: 12px;">Music and Audio</h5>
+                    </div>
+                    <div class="slide slide7" onmouseover="showDropdown(this)" onmouseout="hideDropdown(this)">
+                        <h5 style="font-size: 12px;">Business</h5>
+                    </div>
+                    <div class="slide slide8" onmouseover="showDropdown(this)" onmouseout="hideDropdown(this)">
+                        <h5 style="font-size: 12px;">Video,Photo and Image</h5>
+                    </div>
+                    <div class="slide slide9" onmouseover="showDropdown(this)" onmouseout="hideDropdown(this)">
+                        <h5 style="font-size: 12px;">Marketing, Branding and Sales</h5>
+                    </div>
+                </div>
+                <button class="next" style="width:2vw">&gt;</button>
+            </div>
+        </nav>
+        <div id="dropdown-display"
+            style="display: flex; flex-direction: row; justify-content: space-between; flex-wrap:wrap;padding:0px 5vw">
+        </div>
+    </section>
+    <section class="slidemain" style="display: flex;flex-direction: row;justify-content: center;">
+        <span class="make"
+            style="width:40%;height:100%;top:5%;left:5%;padding-top: 5%;display: flex;flex-direction: column;justify-content: center;align-items: flex-start">
+            <p style="color:red;font-family: 'Madimi One', sans-serif;
+            font-weight: 400;
+            font-style: normal;font-size: 4.625rem;
+        line-height: 5.125rem;width:90%;text-align: left;">Make Bright Ideas Happen !!</p>
+            <p
+                style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: 350;font-size: 20px;width:90%;text-align: left;">
+                Access global talent on the freelancer website trusted by over 1 million businesses worldwide.</p>
+            <div class="input-group"
+                style="border-radius: 10px;box-shadow:  1px 2px 4px 0px rgba(0, 0, 0, 0.1);width:30vw;">
+                <input type="text" class="form-control" placeholder="Try 'Technology and Programming'"
+                    aria-label="Input group example" aria-describedby="btnGroupAddon">
+                <div class="input-group-append">
+                    <div class="input-group-text" id="btnGroupAddon" style="background-color: red;"><i
+                            class="fa fa-search"></i></div>
+                </div>
+            </div>
+            <div id="popular-skills"
+                style="width:90%;display:flex;flex-direction: row;justify-content:flex-start;margin-top: 20px;text-align: center;">
+                <div id="element" style="width:20%; margin: 0%">Try : </div>
+                <div id="element"
+                    style="width:20%;height:22px; margin: 0% 3%;background-color: lightgray;font-size: 13px;border-radius: 5px;">
+                    Coding</div>
+                <div id="element"
+                    style="width:20%;height:22px; margin: 0% 3%;background-color: lightgray;font-size: 13px;border-radius: 5px;">
+                    Software Testing</div>
+                <div id="element"
+                    style="width:20%;height:22px; margin: 0% 3%;background-color: lightgray;font-size: 13px;border-radius: 5px;">
+                    Data Analysis</div>
+            </div>
+        </span>
+        <div
+            style="width:40%;height:100%;top:5%;left:5%;padding-top: 5%;display:flex;flex-direction: row;justify-content: center;align-items: center;">
+            <img src="https://dw3i9sxi97owk.cloudfront.net/homepageRevampA3/HeroImage/instance-4/hero-instance-4--desktop@2x.webp"
+                style="width:70%;height:70%">
+        </div>
+
+    </section>
+    <section class="slidemain" style="display: flex;flex-direction: row;justify-content: center;">
+        <span class="make"
+            style="width:40%;height:100%;top:5%;left:5%;padding-top: 5%;display: flex;flex-direction: column;justify-content: center;align-items: flex-start">
+            <p style="color:rgb(111, 28, 99);font-family: 'Madimi One', sans-serif;
+            font-weight: 400;
+            font-style: normal;font-size: 4.625rem;
+        line-height: 5.125rem;width:90%;text-align: left;">Make Bright Ideas Happen !!</p>
+            <p
+                style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: 350;font-size: 20px;width:90%;text-align: left;">
+                Access global talent on the freelancer website trusted by over 1 million businesses worldwide.</p>
+            <div class="input-group"
+                style="border-radius: 10px;box-shadow:  1px 2px 4px 0px rgba(0, 0, 0, 0.1);width:30vw;">
+                <input type="text" class="form-control" placeholder="Try 'Web Developement'"
+                    aria-label="Input group example" aria-describedby="btnGroupAddon">
+                <div class="input-group-append">
+                    <div class="input-group-text" id="btnGroupAddon" style="background-color: rgb(111, 28, 99);"><i
+                            class="fa fa-search"></i></div>
+                </div>
+            </div>
+            <div id="popular-skills"
+                style="width:90%;display:flex;flex-direction: row;justify-content:flex-start;margin-top: 20px;text-align: center;">
+                <div id="element" style="width:20%; margin: 0%">Try : </div>
+                <div id="element"
+                    style="width:20%;height:22px; margin: 0% 3%;background-color: lightgray;font-size: 13px;border-radius: 5px;">
+                    Databases</div>
+                <div id="element"
+                    style="width:20%;height:22px; margin: 0% 3%;background-color: lightgray;font-size: 13px;border-radius: 5px;">
+                    Software Testing</div>
+                <div id="element"
+                    style="width:20%;height:22px; margin: 0% 3%;background-color: lightgray;font-size: 13px;border-radius: 5px;">
+                    Word Press</div>
+            </div>
+        </span>
+        <div
+            style="width:40%;height:100%;top:5%;left:5%;padding-top: 5%;display:flex;flex-direction: row;justify-content: center;align-items: center;">
+            <img src="https://dw3i9sxi97owk.cloudfront.net/homepageRevampA3/HeroImage/instance-5/hero-instance-5--desktop@2x.webp"
+                style="width:70%;height:70%">
+        </div>
+
+    </section>
+    <section class="slidemain" style="display: flex;flex-direction: row;justify-content: center;">
+        <span class="make"
+            style="width:40%;height:100%;top:5%;left:5%;padding-top: 5%;display: flex;flex-direction: column;justify-content: center;align-items: flex-start">
+            <p style="color:rgb(91, 49, 169);font-family: 'Madimi One', sans-serif;
+            font-weight: 400;
+            font-style: normal;font-size: 4.625rem;
+        line-height: 5.125rem;width:90%;text-align: left;">Make Bright Ideas Happen !!</p>
+            <p
+                style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: 350;font-size: 20px;width:90%;text-align: left;">
+                Access global talent on the freelancer website trusted by over 1 million businesses worldwide.</p>
+            <div class="input-group"
+                style="border-radius: 10px;box-shadow:  1px 2px 4px 0px rgba(0, 0, 0, 0.1);width:30vw;">
+                <input type="text" class="form-control" placeholder="Try 'Graphic Design'"
+                    aria-label="Input group example" aria-describedby="btnGroupAddon">
+                <div class="input-group-append">
+                    <div class="input-group-text" id="btnGroupAddon" style="background-color:rgb(91, 49, 169);"><i
+                            class="fa fa-search"></i></div>
+                </div>
+            </div>
+            <div id="popular-skills"
+                style="width:90%;display:flex;flex-direction: row;justify-content:flex-start;margin-top: 20px;text-align: center;">
+                <div id="element" style="width:20%; margin: 0%">Try : </div>
+                <div id="element"
+                    style="width:20%;height:22px; margin: 0% 3%;background-color: lightgray;font-size: 13px;border-radius: 5px;">
+                    Logo</div>
+                <div id="element"
+                    style="width:20%;height:22px; margin: 0% 3%;background-color: lightgray;font-size: 13px;border-radius: 5px;">
+                    Illustration</div>
+                <div id="element"
+                    style="width:20%;height:22px; margin: 0% 3%;background-color: lightgray;font-size: 13px;border-radius: 5px;">
+                    Animation</div>
+            </div>
+        </span>
+        <div
+            style="width:40%;height:100%;top:5%;left:5%;padding-top: 5%;display:flex;flex-direction: row;justify-content: center;align-items: center;">
+            <img src="https://dw3i9sxi97owk.cloudfront.net/homepageRevampA3/HeroImage/instance-1/hero-instance-1--desktop@2x.webp"
+                style="width:70%;height:70%">
+        </div>
+
+    </section>
+    <div class="button-group" style="width:100vw;display: flex;flex-direction: row;justify-content: center;">
+        <button class="prev1" style="margin: 10px;">&lt;</button>
+        <button class="next1" style="margin: 10px;">&gt;</button>
+    </div>
+    <script>
+        var TP = ["Programming and Coding", "Software Testing", "Mobile App Developement", "Email Template Developement", "Data Science and Analysis", "Social Media App", "Website Developement", "CMS Developement", "Game Developement", "Databases", "All Technology"]
+        var WT = ["Creative Writing", "Ghost Writing", "Content Writing", "Technical Writing", "Business Writing", "Copwriting", "Proofreading", "Research", "Translation", "Transcription"]
+        var Design = ["Graphic Design", "Logo Design", "Web Design", "3D Design", "Fonts and Typography", "Cartoons and Comics", "Labels", "All Designs"]
+        var Business = ["Finance and Accounting", "Consulting", "Tax and Consulting", "Legal Advice", "Management and Developement", "All Business"]
+        var MA = ["Podcast", "Audiobook", "Music Production", "Music Writing", "Song Writing", "Music Dubbing", "Audio and Sound Recording", "Audio and Sound Engineering", "Music Arrangement", "Audio and Sound Mixing", "Audio and Sound Editing", "Vocal Training", "Vocal Coaching", "Music Composition", "Voice-Over"]
+        var Photo = ["Professional Photography", "Videography", "Photo Journalism", "Image Editing", "Film Making", "All"]
+        var SM = ["Snapchat Marketing", "Twitter Marketing", "Instagram Marketing", "Facebook Marketing", "Wechat Marketing", "Viber Marketing", "LinkedIn Marketing", "Pinterest Marketing", "All Marketing"]
+        var Sales = ["Surveys", "Sales and Calls", "Branding", "Fund raising", "Public Relation", "Mystery Shopping", "Exhibition Marketing", "Event Management"]
+        var DM = ["Adsense", "Ecommerce Marketing", "Affiliate Marketing", "Virtual Marketing", "Mobile Marketing", "Podcast Marketing", "Viral Marketing", "Influencer Marketing", "Video Marketing"]
+
+        function showDropdown(element) {
+            var className = element.classList[1];
+            var display_array
+            if (className === 'slide1') {
+                display_array = TP
+            }
+            else if (className === 'slide2') {
+                display_array = WT
+            }
+            else if (className === 'slide3') {
+                display_array = Design
+            }
+            else if (className === 'slide4') {
+                display_array = DM
+            }
+            else if (className === 'slide5') {
+                display_array = SM
+            }
+            else if (className === 'slide6') {
+                display_array = MA
+            }
+            else if (className === 'slide7') {
+                display_array = Business
+            }
+            else if (className === 'slide8') {
+                display_array = Photo
+            }
+            else if (className === 'slide9') {
+                display_array = Sales
+            }
+            var divMain = document.getElementById("dropdown-display");
+            for (let i = 0; i < display_array.length; i++) {
+                var newNode = document.createElement("div");
+                newNode.style.width = "21.25vw";
+                newNode.style.marginRight = "10px";
+                newNode.style.marginBottom = "10px";
+                newNode.style.display = "inline-block";
+                newNode.style.textAlign = "center"
+                newNode.style.fontSize = "10px"
+                newNode.style.color = "grey"
+                var Text = document.createTextNode(display_array[i])
+                newNode.appendChild(Text);
+                divMain.appendChild(newNode);
+            }
+            divMain.style.display = 'block';
+        }
+
+        function hideDropdown(element) {
+            var divMain = document.getElementById("dropdown-display")
+            divMain.innerHTML = ''
+            divMain.style.display = 'none';
+
+        }
+        document.addEventListener("DOMContentLoaded", function () {
+            const isSmallScreen = window.innerWidth <= 800
+            var slides = document.querySelectorAll('.slide');
+            var totalSlides = slides.length;
+            var prevBtn = document.getElementsByClassName("prev")[0]
+            var nextBtn = document.getElementsByClassName("next")[0]
+            if (!isSmallScreen) {
+                var currentSlide = 0;
+                prevBtn.style.display = "block"
+                nextBtn.style.display = "block"
+                function showSlide(index) {
+                    for (var i = 0; i < totalSlides; i++) {
+                        slides[i].style.display = 'none';
+                    }
+                    for (let i = 0; i < 3; i++, index++) {
+                        if (index >= totalSlides) {
+                            index = 0;
+                        }
+                        slides[index].style.display = 'block';
+                    }
+                }
+
+                showSlide(currentSlide);
+
+                document.querySelector('.prev').addEventListener('click', function () {
+                    currentSlide--;
+                    if (currentSlide < 0) {
+                        currentSlide = totalSlides - (currentSlide % totalSlides);
+                    }
+                    showSlide(currentSlide);
+                });
+
+                document.querySelector('.next').addEventListener('click', function () {
+                    currentSlide++;
+                    if (currentSlide >= totalSlides) {
+                        currentSlide = currentSlide % totalSlides;
+                    }
+                    showSlide(currentSlide);
+                });
+            }
+            else {
+                for (var i = 0; i < totalSlides; i++) {
+                    slides[i].style.display = 'block';
+                }
+                prevBtn.style.display = "none"
+                nextBtn.style.display = "none"
+            }
+        });
+        function handleResize() {
+            // Get the width and height of the window
+            var width = window.innerWidth;
+            var height = window.innerHeight;
+
+            // Display the width and height
+            console.log("Window width:", width);
+            console.log("Window height:", height);
+            if (width <= 600) {
+                var element = document.getElementById("navbar-bottom-2")
+                element.style.display = "none"
+            }
+            else if (width >= 600) {
+                var element = document.getElementById("navbar-bottom-2")
+                element.style.display = "none"
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            // Initialize variables
+            var currentSlide = 0;
+            var slides = document.querySelectorAll('.slidemain');
+            var totalSlides = slides.length;
+
+            // Function to display the current slide
+            function showSlide(index) {
+                // Hide all slides
+                for (var i = 0; i < totalSlides; i++) {
+                    slides[i].style.display = 'none';
+                }
+                // Display the current slide
+                slides[index].style.display = 'flex';
+            }
+
+            // Initial display of the first slide
+            showSlide(currentSlide);
+
+            // Event listener for the "Prev" button
+            document.querySelector('.prev1').addEventListener('click', function () {
+                currentSlide--;
+                if (currentSlide < 0) {
+                    currentSlide = totalSlides - 1; // Loop to the last slide
+                }
+                showSlide(currentSlide);
+            });
+
+            // Event listener for the "Next" button
+            document.querySelector('.next1').addEventListener('click', function () {
+                currentSlide++;
+                if (currentSlide >= totalSlides) {
+                    currentSlide = 0; // Loop back to the first slide
+                }
+                showSlide(currentSlide);
+            });
+        });
+
+
+
+
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Custom CSS */
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .application-form {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+        }
+
+        .application-form h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="application-form p-4">
+                    <h2>Job Application Form</h2>
+                    <form>
+                        <div class="card mb-2" id="personalInfo">
+                            <div class="card-body">
+                                <h5 class="card-title">Personal Information</h5>
+                                <div class="form-group">
+                                    <label for="firstName">First Name:</label>
+                                    <input type="text" class="form-control" id="firstName"
+                                        placeholder="Enter your first name">
+                                    <p id="errorfName"></p>
+
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name:</label>
+                                    <input type="text" class="form-control" id="lastName"
+                                        placeholder="Enter your Last name">
+                                    <p id="errorlName"></p>
+
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email:</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Enter your email"
+                                        required>
+                                    <p id="errorEmail"></p>
+
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number:</label>
+                                    <input type="tel" class="form-control" id="phone"
+                                        placeholder="Enter your phone number" required>
+                                    <p id="errorPhone"></p>
+
+                                </div>
+                                <div class="form-group">
+                                    <label for="address">Address:</label>
+                                    <input type="text" class="form-control" id="address"
+                                        placeholder="Enter your address" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-2" id="CV/JL">
+                            <div class="card-body">
+                                <div class="card-title">
+                                    <h5>Resume and Cover Letter</h5>
+                                </div>
+                                <div class="form-group">
+                                    <label for="resume">Resume:</label>
+                                    <input type="file" class="form-control-file" id="resume">
+                                </div>
+                                <div class="form-group">
+                                    <label for="coverLetter">Cover Letter:</label>
+                                    <textarea id="coverLetter" class="form-control" rows="3"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-2" id="Educationbg">
+                            <div class="card-body">
+                                <div class="card-title">
+                                    <h5>Education</h5>
+                                </div>
+                                <div class="form-group">
+                                    <label for="EducationLevel">Highest Level of Education</label>
+                                    <select class="form-control" id="EducationLevel" required>
+                                        <option value="">Select Option</option>
+                                        <option value="matric">Matriculation</option>
+                                        <option value="OLevels">O Levels</option>
+                                        <option value="FSc">Fsc</option>
+                                        <option value="Alevels">A Levels</option>
+                                        <option value="Bachelors">Bachelors</option>
+                                        <option value="Masters">Masters</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="instituition">Name of School/University:</label>
+                                    <input type="text" id="instituition" class="form-control"
+                                        placeholder="Enter School/University Name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="major">Major:</label>
+                                    <select class="form-control" id="major" required>
+                                        <option value="">Select Option</option>
+                                        <option value="BS(CS)">BSCS</option>
+                                        <option value="BBA">BBS</option>
+                                        <option value="BSAF">BSAF</option>
+                                        <option value="BS(EE)">BSEE</option>
+                                        <option value="BS(CV)">BSCV</option>
+                                        <option value="Engineering">Engineering</option>
+                                        <option value="Computer">Computer Science</option>
+                                        <option value="Mng">Management</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="gradYear">Graduation Year:</label>
+                                    <input type="date" class="form-control" id="gradYear" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-2" id="JobHistory">
+                            <div class="card-body">
+                                <div class="card-title">
+                                    <h5>Previous Jobs History (latest 3 only)</h5>
+                                </div>
+                                <div class="card mb-1">
+                                    <div class="card-body">
+                                        <div class="card-title">
+                                            <h6>1 :</h6>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="companyname1">Company Name:</label>
+                                            <input type="text" class="form-control companyname" id="companyname1"
+                                                placeholder="Enter Company Name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="joiningdate1">Joining Date:</label>
+                                            <input type="date" class="form-control joiningdate" id="joiningdate1">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="leavingDate1">Leaving Date:</label>
+                                            <input type="date" class="form-control leavingDate" id="leavingDate1">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="responsibility1">Responsibility:</label>
+                                            <input type="text" class="form-control responsibility" id="responsibility1"
+                                                placeholder="Enter Your Responsibility">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card mb-1">
+                                    <div class="card-body">
+                                        <div class="card-title">
+                                            <h6>2 :</h6>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="companyname2">Company Name:</label>
+                                            <input type="text" class="form-control companyname" id="companyname2"
+                                                placeholder="Enter Company Name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="joiningdate2">Joining Date:</label>
+                                            <input type="date" class="form-control joiningdate" id="joiningdate2">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="leavingDate2">Leaving Date:</label>
+                                            <input type="date" class="form-control leavingDate" id="leavingDate2">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="responsibility2">Responsibility:</label>
+                                            <input type="text" class="form-control responsibility" id="responsibility2"
+                                                placeholder="Enter Your Responsibility">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card mb-1">
+                                    <div class="card-body">
+                                        <div class="card-title">
+                                            <h6>3 :</h6>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="companyname3">Company Name:</label>
+                                            <input type="text" class="form-control companyname" id="companyname3"
+                                                placeholder="Enter Company Name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="joiningdate3">Joining Date:</label>
+                                            <input type="date" class="form-control joiningdate" id="joiningdate3">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="leavingDate3">Leaving Date:</label>
+                                            <input type="date" class="form-control leavingDate" id="leavingDate3">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="responsibility3">Responsibility:</label>
+                                            <input type="text" class="form-control responsibility" id="responsibility3"
+                                                placeholder="Enter Your Responsibility">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-2" id="available">
+                            <div class="card-body">
+                                <div class="card-title">
+                                    <h5>Availability</h5>
+                                </div>
+                                <div class="form-group">
+                                    <label for="availdate">Start Date:</label>
+                                    <input type="date" id="availdate" class="form-control" required>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" value="check" id="customCheck1" required>
+                                    <label class="form-check-label" for="customCheck1"></label>Willingness to
+                                    Relocate</label>
+                                </div>
+                                <div class="form-group">
+                                    <label for="fromday">From:</label>
+                                    <select id="fromday" required>
+                                        <option value="">Select option</option>
+                                        <option value="Sunday">Sunday</option>
+                                        <option value="Monday">Monday</option>
+                                        <option value="Tuesday">Tuesday</option>
+                                        <option value="Wedndesday">Wedndesday</option>
+                                        <option value="Thursday">Thursday</option>
+                                        <option value="Friday">Friday</option>
+                                        <option value="Saturday">Saturday</option>
+
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="today">To:</label>
+                                    <select id="today" required>
+                                        <option value="">Select option</option>
+                                        <option value="Sunday">Sunday</option>
+                                        <option value="Monday">Monday</option>
+                                        <option value="Tuesday">Tuesday</option>
+                                        <option value="Wedndesday">Wedndesday</option>
+                                        <option value="Thursday">Thursday</option>
+                                        <option value="Friday">Friday</option>
+                                        <option value="Saturday">Saturday</option>
+
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-2" id="references">
+                            <div class="card-body">
+                                <div class="card-title">
+                                    <h5>References (only 2)</h5>
+                                </div>
+                                <div class="card mb-1">
+                                    <div class=" card-body">
+                                        <div class="card-title">
+                                            <h6>1 : </h6>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="refName1">Name :</label>
+                                            <input type="text" class="form-control refName" id="refName1"
+                                                placeholder="Enter Name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="refContact1">Contact :</label>
+                                            <input type="text" class="form-control refContact" id="refContact1"
+                                                placeholder="Enter Number">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="refRelation1">Relation :</label>
+                                            <input type="text" class="form-control refRelation" id="refRelation1"
+                                                placeholder="Enter Relation">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card mb-1">
+                                    <div class=" card-body">
+                                        <div class="card-title">
+                                            <h6>2 : </h6>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="refName2">Name :</label>
+                                            <input type="text" class="form-control refName" id="refName2"
+                                                placeholder="Enter Name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="refContact2">Contact :</label>
+                                            <input type="text" class="form-control refContact" id="refContact2"
+                                                placeholder="Enter Number">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="refRelation3">Relation :</label>
+                                            <input type="text" class="form-control refRelation" id="refRelation3"
+                                                placeholder="Enter Relation">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-2" id="skills">
+                            <div class="card-body">
+                                <div class="card-title">
+                                    <h5>Skills</h5>
+                                </div>
+                                <div class="form-group">
+                                    <label for="relevantSkills">Relevant Skills : </label>
+                                    <textarea id="relevantSkills" class="form-control" type="" rows="2"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="certifications">Certifications : </label>
+                                    <textarea id="certifications" class="form-control" type="" rows="2"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-2" id="questions">
+                            <div class="card-body">
+                                <div class="card-title">
+                                    <h5>Additional Questions</h5>
+                                </div>
+                                <div class="form-group">
+                                    <label for="addquestion">Why do you want to work for this company?</label>
+                                    <textarea class="form-control" id="addquestion" rows="2"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="termsCheckbox">
+                            <label class="form-check-label" for="termsCheckbox">Agree to Terms and Conditions</label>
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="privacyCheckbox">
+                            <label class="form-check-label" for="privacyCheckbox">Acknowledge Privacy Policy</label>
+                        </div>
+                        <p id="termError"></p>
+                        <button type="submit" class="btn btn-primary btn-block mt-3" id="submitbutton">Submit
+                            Application</button>
+                        <button type="submit" disabled class="btn btn-primary btn-block mt-3" id="displayInTable">Display in
+                            Table</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and jQuery (optional) -->
+    <script src="valid.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
